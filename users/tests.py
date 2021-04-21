@@ -1,4 +1,3 @@
-# from django.http.request import HttpRequest
 from django.test import TestCase
 
 from users.forms import CustomSignupForm
@@ -60,20 +59,20 @@ class TestClass03(TestCase):
 
     def setUp(self) -> None:
         """Instansiate CustomSignup"""
-        self.m = CustomUserManager()
-        self.m.model = CustomUser
+        self.manager = CustomUserManager()
+        self.manager.model = CustomUser
 
     def test_case01(self):
-        """Create superuser normal"""
-        su = self.m.create_superuser(email=USER["email"], name=USER["name"], password=USER["password"])
+        """Create superuserperuser normal"""
+        superuser = self.manager.create_superuser(email=USER["email"], name=USER["name"], password=USER["password"])
         self.assertTrue(CustomUser.objects.filter(email=USER["email"]).exists())
-        self.assertTrue(isinstance(su, CustomUser))
-        self.assertEqual(su.email, USER["email"])
-        self.assertEqual(su.name, USER["name"])
-        self.assertTrue(su.is_superuser)
-        self.assertTrue(su.is_staff)
+        self.assertTrue(isinstance(superuser, CustomUser))
+        self.assertEqual(superuser.email, USER["email"])
+        self.assertEqual(superuser.name, USER["name"])
+        self.assertTrue(superuser.is_superuser)
+        self.assertTrue(superuser.is_staff)
 
     def test_case02(self):
-        """Create superuser without required parameter (email)"""
+        """Create superuserperuser without required parameter (email)"""
         with self.assertRaises(ValueError):
-            self.m.create_superuser(email="", name=USER["name"], password=USER["password"])
+            self.manager.create_superuser(email="", name=USER["name"], password=USER["password"])
