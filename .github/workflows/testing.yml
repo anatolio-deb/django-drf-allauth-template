@@ -22,7 +22,7 @@ jobs:
     - name: Lint with pylint
       run: |
         pip install pylint pylint-django
-        pylint --load-plugins pylint_django --django-settings-module=test_project.settings --max-line-length=120 --notes=
+        pylint --load-plugins pylint_django --django-settings-module=core.settings --max-line-length=120 --notes=
     - name: Coverage report
       run: |
         pip install coverage
