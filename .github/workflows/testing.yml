@@ -21,8 +21,10 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with pylint
       run: |
+        pip install pylint pylint-django
         pylint --load-plugins pylint_django --django-settings-module=test_project.settings --max-line-length=120 --notes=
     - name: Coverage report
       run: |
+        pip install coverage
         coverage run manage.py test
         coverage report
