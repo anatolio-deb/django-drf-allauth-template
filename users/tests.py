@@ -1,4 +1,4 @@
-from django.http.request import HttpRequest
+# from django.http.request import HttpRequest
 from django.test import TestCase
 
 from users.forms import CustomSignupForm
@@ -32,7 +32,7 @@ class TestClass01(TestCase):
         self.assertFalse(self.user.is_staff)
 
     def test_case04(self):
-        """Instance's __str__"""
+        """Instance's __str__ -> instance.email"""
         self.assertEqual(self.user.__str__(), USER["email"])
 
 
