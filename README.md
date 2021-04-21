@@ -1,6 +1,6 @@
 # Django Authentication Template Project
 
-A template with a custom user model built on top of the [AbstractBaseUser](https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#specifying-a-custom-user-model). Integrates [allauth](https://django-allauth.readthedocs.io/) and [DRF](https://www.django-rest-framework.org/) providing `UserViewset`, `UserSerializer`, permission classes, admin classes, and following endpoints:
+A template with a custom user model built on top of the [AbstractBaseUser](https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#specifying-a-custom-user-model). Integrates [allauth](https://django-allauth.readthedocs.io/) and [DRF](https://www.django-rest-framework.org/) providing `CustomUserViewset`, `CustomUserSerializer`, permission classes, admin classes, and following endpoints:
 
 ```
 api/users/
@@ -20,6 +20,6 @@ The `CustomUser` model has an *email* identifying field and, by default, does no
 
 ## Tests
 
-- **Model**: `CustomUser`, `CustomuserManager`
+- **Model**: `CustomUser`, `CustomUserManager`
 - **Forms**: `CustomSignupForm`
 
