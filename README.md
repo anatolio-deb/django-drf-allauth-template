@@ -11,7 +11,7 @@ api/users/<int:pk>
 
 *Plus endpoints provided by allauth. See [installation instructions](https://django-allauth.readthedocs.io/en/latest/installation.html).*
 
-The `CustomUser` model has an *email* identifying field and, by default, does not accept a username as described in [Advanced Usage](https://django-allauth.readthedocs.io/en/latest/advanced.html#custom-user-models).
+The `CustomUser` model has an *email* identifying field and, by default, does not accept a *username* as described in [Advanced Usage](https://django-allauth.readthedocs.io/en/latest/advanced.html#custom-user-models).
 
 ## When to use it
 
