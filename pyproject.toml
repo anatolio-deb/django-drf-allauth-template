@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "django-authentication-blueprint"
+version = "0.1.0"
+description = ""
+authors = ["Anatolio Nikiforidis <nikiforova693@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2"
+djangorestframework = "^3.12.4"
+django-allauth = "^0.44.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.7.4"
+pylint-django = "^2.4.3"
+black = "^20.8b1"
+isort = "^5.8.0"
+coverage = "^5.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
