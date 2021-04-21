@@ -20,12 +20,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry
     - name: Set up poetry environment
-        run: |
+      run: |
         poetry install
         poetry shell
     - name: Lint with pylint
-        run: |
-          pylint --load-plugins pylint_django --django-settings-module=test_project.settings --max-line-length=120 --notes=
+      run: |
+        pylint --load-plugins pylint_django --django-settings-module=test_project.settings --max-line-length=120 --notes=
     - name: Coverage report
-        run: |
-          coverage run --omit=/*pypoetry*/ manage.py test
+      run: |
+        coverage run --omit=/*pypoetry*/ manage.py test
+        coverage report
